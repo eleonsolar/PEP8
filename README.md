@@ -13,47 +13,47 @@ Guía oficial [PEP8](https://peps.python.org/pep-0008/)
 **Tabla de contenido**
 
 - [Introducción](#id1)
-- [La insensata coherencia es el duende de las mentes pequeñas](#convenciones-generales)
-- [Disposición del código]
-  - [Identación]
-  - [¿Tabulaciones o espacios?]
-  - [Longitud máxima de línea]
-  - [¿Debe haber un salto de línea antes o después de un operador binario?]
-  - [Líneas en blanco]
-  - [Codificación del fichero fuente]
-  - [Importaciones]
-  - [Nombres de Dunder a nivel de módulo]
-- [Comillas]
-- [Espacios en blanco en expresiones y sentencias]
-  - [Las manías]
-  - [Otras recomendaciones]
-- [Cuándo usar comas finales]
-- [Comentarios]
-  - [Comentarios en bloque]
-  - [Comentarios en línea]
-  - [Cadenas de documentación]
-- [Convenciones de nomenclatura]
-  - [Principio de anulación]
-  - [Descriptivo: Estilos de denominación] 
-  - [Prescriptivo: Convenciones de denominación]
-    - [Nombres que deben evitarse]
-    - [Compatibilidad ASCII]
-    - [Nombres de paquetes y módulos]
-    - [Nombres de clases]
-    - [Nombres de variables de tipo]
-    - [Nombres de excepción]
-    - [Nombres de variables globales]
-    - [Nombres de funciones y variables]
-    - [Argumentos de funciones y métodos]
-    - [Nombres de métodos y variables de instancia]
-    - [Constantes]
-    - [Diseño para la Herencia]
-  - [Interfaces públicas e internas]
-- [Recomendaciones de programación]
-  - [Anotaciones de funciones]
-  - [Anotaciones de variables]
-- [Referencias]
-- [Copyright]
+- [La insensata coherencia es el duende de las mentes pequeñas](#id2)
+- [Disposición del código](#id3)
+  - [Identación](#id4)
+  - [¿Tabulaciones o espacios?](#id5)
+  - [Longitud máxima de línea](#id6)
+  - [¿Debe haber un salto de línea antes o después de un operador binario?](#id7)
+  - [Líneas en blanco](#id8)
+  - [Codificación del fichero fuente](#id9)
+  - [Importaciones](#id10)
+  - [Nombres de Dunder a nivel de módulo](#id11)
+- [Comillas](#id12)
+- [Espacios en blanco en expresiones y sentencias](#id13)
+  - [Las manías](#id14)
+  - [Otras recomendaciones](#id15)
+- [Cuándo usar comas finales](#id16)
+- [Comentarios](#id17)
+  - [Comentarios en bloque](#id18)
+  - [Comentarios en línea](#id19)
+  - [Cadenas de documentación](#id20)
+- [Convenciones de nomenclatura](#id21)
+  - [Principio de anulación](#id22)
+  - [Descriptivo: Estilos de denominación](#id23)
+  - [Prescriptivo: Convenciones de denominación](#id24)
+    - [Nombres que deben evitarse](#id25)
+    - [Compatibilidad ASCII](#id26)
+    - [Nombres de paquetes y módulos](#id27)
+    - [Nombres de clases](#id28)
+    - [Nombres de variables de tipo](#id29)
+    - [Nombres de excepción](#id30)
+    - [Nombres de variables globales](#id31)
+    - [Nombres de funciones y variables](#id32)
+    - [Argumentos de funciones y métodos](#id33)
+    - [Nombres de métodos y variables de instancia](#id34)
+    - [Constantes](#id35)
+    - [Diseño para la Herencia](#id36)
+  - [Interfaces públicas e internas](#id37)
+- [Recomendaciones de programación](#id38)
+  - [Anotaciones de funciones](#id39)
+  - [Anotaciones de variables](#id40)
+- [Referencias](#id41)
+- [Copyright](#id42)
   
   
 ## Introducción<a name="id1"></a>  
@@ -66,7 +66,7 @@ Esta guía de estilo evoluciona con el tiempo a medida que se identifican conven
 
 Muchos proyectos tienen sus propias guías de estilo de codificación. En caso de conflicto, estas guías específicas del proyecto tienen prioridad para ese proyecto.
 
-## La insensata coherencia es el duende de las mentes pequeñas
+## La insensata coherencia es el duende de las mentes pequeñas<a name="id2"></a>
 
 Una de las ideas clave de Guido es que el código se lee mucho más a menudo de lo que se escribe. Las directrices proporcionadas aquí pretenden mejorar la legibilidad del código y hacerlo consistente en todo el amplio espectro de código Python. Como dice PEP 20, "La legibilidad cuenta".
 
@@ -83,9 +83,9 @@ Otras buenas razones para ignorar una directriz concreta:
   3. Porque el código en cuestión es anterior a la introducción de la directriz y no hay ninguna otra razón para modificar ese código.
   4. Cuando el código necesita seguir siendo compatible con versiones antiguas de Python que no soportan la característica recomendada por la guía de estilo.
   
-## Disposición del código
+## Disposición del código<a name="id3"></a>
 
-### Identación
+### Identación<a name="id4"></a>
 
 Usa 4 espacios por nivel de identación.
 
@@ -183,7 +183,7 @@ result = some_function_that_takes_arguments(
 )
 ```
 
-### ¿Tabulaciones o espacios?
+### ¿Tabulaciones o espacios?<a name="id5"></a>
 
 Los espacios son el método de sangría preferido.
 
@@ -191,7 +191,7 @@ Los tabuladores deben usarse únicamente para mantener la coherencia con el cód
 
 Python no permite mezclar tabuladores y espacios para la sangría.
 
-### Longitud máxima de línea
+### Longitud máxima de línea<a name="id6"></a>
 
 Limite todas las líneas a un máximo de 79 caracteres.
 
@@ -221,7 +221,7 @@ Otro caso es el de las sentencias assert.
 
 Asegúrese de aplicar la sangría adecuada a la línea de continuación. 
 
-### ¿Debe haber un salto de línea antes o después de un operador binario?
+### ¿Debe haber un salto de línea antes o después de un operador binario?<a name="id7"></a>
 
 Durante décadas, el estilo recomendado era hacer una pausa después de los operadores binarios. Pero esto puede perjudicar la legibilidad de dos maneras: los operadores tienden a dispersarse por diferentes columnas de la pantalla, y cada operador se aleja de su operando y se sitúa en la línea anterior. En este caso, el ojo tiene que hacer un trabajo extra para saber qué elementos se suman y cuáles se restan:
 
@@ -251,7 +251,7 @@ income = (gross_wages
 
 En código Python, es permisible romper antes o después de un operador binario, siempre que la convención sea consistente localmente. Para código nuevo se sugiere el estilo de Knuth.
 
-### Líneas en blanco
+### Líneas en blanco<a name="id8"></a>
 
 Rodee las definiciones de funciones y clases de nivel superior con dos líneas en blanco.
 
@@ -263,7 +263,7 @@ Use líneas en blanco en funciones, con moderación, para indicar secciones lóg
 
 Python acepta el carácter de avance de página control-L (es decir, ^L) como espacio en blanco; muchas herramientas tratan estos caracteres como separadores de página, por lo que puede utilizarlos para separar páginas de secciones relacionadas de su archivo. Tenga en cuenta que algunos editores y visualizadores de código basados en web pueden no reconocer control-L como un carácter de alimentación de formulario y mostrarán otro glifo en su lugar.
 
-### Codificación del archivo fuente
+### Codificación del archivo fuente<a name="id9"></a>
 
 El código en el núcleo de la distribución de Python debería usar siempre UTF-8, y no debería tener una declaración de codificación.
 
@@ -273,7 +273,7 @@ Todos los identificadores en la biblioteca estándar de Python DEBEN usar identi
 
 Se anima a los proyectos de código abierto con una audiencia global a adoptar una política similar.
 
-### Importaciones
+### Importaciones<a name="id10"></a>
 
 - Por lo general, las importaciones deben ir en líneas separadas:
 
@@ -341,7 +341,7 @@ y usar “myclass.MyClass” y “foo.bar.yourclass.YourClass”.
 Cuando se republican nombres de esta forma, se siguen aplicando las directrices que se indican a continuación en relación con las interfaces públicas e internas.
 
 
-### Nombres de "Dunder" a nivel de módulo
+### Nombres de "Dunder" a nivel de módulo<a name="id11"></a>
 
 Los "dunders" a nivel de módulo (es decir, nombres con dos guiones bajos iniciales y dos finales) como __all__, __author__, __version__, etc. deben colocarse después del docstring del módulo pero antes de cualquier sentencia import excepto de las importaciones __future__. Python obliga a que las importaciones futuras aparezcan en el módulo antes que cualquier otro código excepto las cadenas de documentación:
 
@@ -361,15 +361,15 @@ import os
 import sys
 ```
 
-## Comillas
+## Comillas<a name="id12"></a>
 
 En Python, las cadenas entre comillas simples y las cadenas entre comillas dobles son iguales. Este PEP no hace ninguna recomendación al respecto. Elige una regla y cíñete a ella. Sin embargo, cuando una cadena contiene caracteres de comillas simples o dobles, use la otra para evitar barras invertidas en la cadena. Mejora la legibilidad.
 
 Para cadenas con comillas triples, use siempre comillas dobles para ser consistente con la convención docstring en PEP 257.}
 
-## Espacios en blanco en expresiones y sentencias
+## Espacios en blanco en expresiones y sentencias<a name="id13"></a>
 
-### Las manías
+### Las manías<a name="id14"></a>
 
 Evite los espacios en blanco en las siguientes situaciones:
 
@@ -461,7 +461,7 @@ y             = 2
 long_variable = 3
 ```
 
-### Otras recomendaciones:
+### Otras recomendaciones:<a name="id15"></a>
 
 - Evite los espacios en blanco al final del texto. Como suele ser invisible, puede ser confuso: por ejemplo, una barra invertida seguida de un espacio y una nueva línea no cuenta como marcador de continuación de línea. Algunos editores no lo preservan y muchos proyectos (como el propio CPython) tienen ganchos pre-commit que lo rechazan.
 
@@ -570,7 +570,7 @@ do_one(); do_two(); do_three(long, argument,
 if foo == 'blah': one(); two(); three()
 ```
 
-## Cuándo usar comas finales
+## Cuándo usar comas finales<a name="id16"></a>
 
 Las comas finales suelen ser opcionales, pero son obligatorias cuando se trata de una tupla de un solo elemento. Para mayor claridad, se recomienda rodear estas últimas de paréntesis (técnicamente redundantes):
 
@@ -601,7 +601,7 @@ FILES = ['setup.cfg', 'tox.ini',]
 initialize(FILES, error=True,)
 ```
 
-## Comentarios
+## Comentarios<a name="id17"></a>
 
 Los comentarios que contradicen el código son peores que la ausencia de comentarios. Es prioritario mantener los comentarios actualizados cuando cambie el código.
 
@@ -615,13 +615,13 @@ Asegúrate de que tus comentarios sean claros y fácilmente comprensibles para o
 
 Codificadores de Python de países de habla no inglesa: por favor, escriba sus comentarios en inglés, a menos que esté 120% seguro de que el código nunca será leído por personas que no hablen su idioma.	
 
-### Comentarios en bloque
+### Comentarios en bloque<a name="id18"></a>
   
 Por lo general, los comentarios de bloque se aplican a parte (o a todo) el código que les sigue, y están sangrados al mismo nivel que ese código. Cada línea de un comentario de bloque comienza con un # y un espacio (a menos que se trate de texto sangrado dentro del comentario).
 
 Los párrafos dentro de un comentario de bloque están separados por una línea que contiene un solo #.
 
-### Comentarios en línea
+### Comentarios en línea<a name="id19"></a>
 
 Utilice los comentarios en línea con moderación.
 
@@ -639,7 +639,7 @@ Pero a veces, esto es útil:
 x = x + 1                 # Compensate for border
 ```
 
-### Cadenas de documentación
+### Cadenas de documentación<a name="id20"></a>
 
 Las convenciones para escribir buenas cadenas de documentación (también conocidas como "docstrings") están inmortalizadas en PEP 257.
 
@@ -659,15 +659,15 @@ Optional plotz says to frobnicate the bizbaz first.
 """Return an ex-parrot."""
 ```
 
-## Convenciones de nomenclatura
+## Convenciones de nomenclatura<a name="id21"></a>
 
 Las convenciones de nomenclatura de las bibliotecas de Python son un poco confusas, así que nunca conseguiremos que esto sea completamente consistente - no obstante, aquí están los estándares de nomenclatura actualmente recomendados. Los nuevos módulos y paquetes (incluyendo frameworks de terceros) deberían escribirse siguiendo estos estándares, pero cuando una biblioteca existente tiene un estilo diferente, se prefiere la consistencia interna.
 
-### Principio de anulación
+### Principio de anulación<a name="id22"></a>
 
 Los nombres que son visibles para el usuario como partes públicas de la API deben seguir convenciones que reflejen el uso más que la implementación.
 
-### Descriptivo: Estilos de denominación
+### Descriptivo: Estilos de denominación<a name="id23"></a>
 
 Hay muchos estilos de nomenclatura diferentes. Es útil poder reconocer qué estilo de denominación se está utilizando, independientemente de para qué se utilicen.
 
@@ -701,25 +701,25 @@ tkinter.Toplevel(master, class_='ClassName')
 
 - __double_leading_and_trailing_underscore__: Objetos o atributos "mágicos" que viven en espacios de nombres controlados por el usuario. Por ejemplo, __init__, __import__ o __file__. No invente nunca estos nombres; utilícelos sólo como están documentados.
 
-### Prescriptivo: Convenciones de denominación
+### Prescriptivo: Convenciones de denominación<a name="id24"></a>
 
-#### Nombres que deben evitarse
+#### Nombres que deben evitarse<a name="id25"></a>
 
 No utilice nunca los caracteres "l" (letra minúscula el), "O" (letra mayúscula oh) o "I" (letra mayúscula eye) como nombres de variables de un solo carácter.
 
 En algunos tipos de letra, estos caracteres no se distinguen de los números uno y cero. Si tiene la tentación de utilizar "l", utilice "L" en su lugar.
 
-#### Compatibilidad ASCII
+#### Compatibilidad ASCII<a name="id26"></a>
 
 Los identificadores utilizados en la biblioteca estándar deben ser compatibles con ASCII, tal y como se describe en la sección de política del PEP 3131.
 
-#### Nombres de paquetes y módulos
+#### Nombres de paquetes y módulos<a name="id27"></a>
 
 Los módulos deben tener nombres cortos, todo en minúsculas. Se pueden utilizar guiones bajos en el nombre del módulo si mejora la legibilidad. Los paquetes de Python también deben tener nombres cortos, todo en minúsculas, aunque se desaconseja el uso de guiones bajos.
 
 Cuando un módulo de extensión escrito en C o C++ va acompañado de un módulo Python que proporciona una interfaz de nivel superior (por ejemplo, más orientada a objetos), el módulo C/C++ lleva un guión bajo inicial (por ejemplo, _socket).
 
-#### Nombres de clases
+#### Nombres de clases<a name="id28"></a>
 
 Los nombres de las clases deben utilizar normalmente la convención CapWords.
 
@@ -727,7 +727,7 @@ La convención de nomenclatura de funciones puede utilizarse en los casos en los
 
 Tenga en cuenta que existe una convención distinta para los nombres de los componentes: la mayoría de los nombres de los componentes son palabras sueltas (o dos palabras juntas), y la convención CapWords sólo se utiliza para los nombres de las excepciones y las constantes de los componentes.
 
-#### Nombres de variables de tipo
+#### Nombres de variables de tipo<a name="id29"></a>
 
 Los nombres de las variables de tipo introducidas en PEP 484 normalmente deberían usar CapWords prefiriendo nombres cortos: T, AnyStr, Num. Se recomienda añadir los sufijos _co o _contra a las variables utilizadas para declarar el comportamiento covariante o contravariante correspondientemente:
 
@@ -738,17 +738,17 @@ VT_co = TypeVar('VT_co', covariant=True)
 KT_contra = TypeVar('KT_contra', contravariant=True)
 ```
 
-#### Nombres de excepción
+#### Nombres de excepción<a name="id30"></a>
 
 Dado que las excepciones deben ser clases, aquí se aplica la convención de nomenclatura de clases. Sin embargo, debe utilizar el sufijo "Error" en los nombres de las excepciones (si la excepción es realmente un error).
 
-#### Nombres de variables globales
+#### Nombres de variables globales<a name="id31"></a>
 
 (Las convenciones son más o menos las mismas que para las funciones.
 
 Los módulos que están diseñados para su uso a través de from M import * deben utilizar el mecanismo __all__ para evitar la exportación de globales, o utilizar la antigua convención de prefijar tales globales con un guión bajo (que es posible que desee hacer para indicar que estos globales son "no públicos del módulo").
 
-#### Nombres de funciones y variables
+#### Nombres de funciones y variables<a name="id32"></a>
 
 Los nombres de las funciones deben escribirse en minúsculas, con las palabras separadas por guiones bajos si es necesario para mejorar la legibilidad.
 
@@ -756,7 +756,7 @@ Los nombres de las variables siguen la misma convención que los nombres de las 
 
 Sólo se permite mixedCase en contextos en los que ya es el estilo predominante (por ejemplo, threading.py), para mantener la compatibilidad con versiones anteriores.
 
-#### Argumentos de funciones y métodos
+#### Argumentos de funciones y métodos<a name="id33"></a>
 
 Utilice siempre self como primer argumento en los métodos de instancia.
 
@@ -764,7 +764,7 @@ Utilice siempre cls para el primer argumento de los métodos de clase.
 
 Si el nombre de un argumento de función coincide con una palabra clave reservada, suele ser mejor añadir un guión bajo al final en lugar de utilizar una abreviatura o un error ortográfico. Así, class_ es mejor que clss. (Tal vez sea mejor evitar tales choques utilizando un sinónimo).
 
-#### Nombres de métodos y variables de instancia
+#### Nombres de métodos y variables de instancia<a name="id34"></a>
 
 Utilice las reglas de nomenclatura de funciones: minúsculas con palabras separadas por guiones bajos según sea necesario para mejorar la legibilidad.
 
@@ -776,11 +776,11 @@ Python mezcla estos nombres con el nombre de la clase: si la clase Foo tiene un 
 
 Nota: existe cierta controversia sobre el uso de __names (véase más adelante).
 
-#### Constantes
+#### Constantes<a name="id35"></a>
 
 Las constantes suelen definirse a nivel de módulo y se escriben en mayúsculas con guiones bajos separando las palabras. Algunos ejemplos son MAX_OVERFLOW y TOTAL.
 
-#### Diseño para la Herencia
+#### Diseño para la Herencia<a name="id36"></a>
 
 Decide siempre si los métodos y variables de instancia de una clase (colectivamente: "atributos") deben ser públicos o no públicos. En caso de duda, elige no público; es más fácil hacerlo público después que hacer no público un atributo público.
 
@@ -809,7 +809,7 @@ Nota 2: La manipulación de nombres puede hacer que ciertos usos, como la depura
 
 Nota 3: No a todo el mundo le gusta el name mangling. Intente equilibrar la necesidad de evitar conflictos accidentales de nombres con el uso potencial por parte de usuarios avanzados.
 
-### Interfaces públicas e internas
+### Interfaces públicas e internas<a name="id37"></a>
 
 Las garantías de compatibilidad con versiones anteriores sólo se aplican a las interfaces públicas. Por ello, es importante que los usuarios puedan distinguir claramente entre interfaces públicas e internas.
 
@@ -823,7 +823,7 @@ Una interfaz también se considera interna si cualquier espacio de nombres que l
 
 Los nombres importados deben considerarse siempre detalles de implementación. Otros módulos no deben confiar en el acceso indirecto a dichos nombres importados a menos que sean una parte explícitamente documentada de la API del módulo que los contiene, como os.path o el módulo __init__ de un paquete que expone funcionalidad de submódulos.
 
-## Recomendaciones de programación
+## Recomendaciones de programación<a name="id38"></a>
 
 - El código debe escribirse de forma que no perjudique a otras implementaciones de Python (PyPy, Jython, IronPython, Cython, Psyco, etc.).
 Por ejemplo, no confíe en la eficiente implementación de CPython de la concatenación de cadenas en el lugar para sentencias de la forma a += b o a = a + b. Esta optimización es frágil incluso en CPython (sólo funciona para algunos tipos) y no está presente en absoluto en implementaciones que no usan refcounting. En partes de la librería sensibles al rendimiento, debería usarse en su lugar la forma ''.join(). Esto asegurará que la concatenación ocurra en tiempo lineal a través de varias implementaciones.
@@ -1020,7 +1020,7 @@ def foo():
         return 42
 ```
 
-### Anotaciones de funciones
+### Anotaciones de funciones<a name="id39"></a>
 
 Con la aceptación de PEP 484, las reglas de estilo para las anotaciones de funciones han cambiado.
 
@@ -1037,7 +1037,7 @@ cerca de la parte superior del archivo; esto indica a los comprobadores de tipo 
 - Como los linters, los comprobadores de tipos son herramientas opcionales e independientes. Los intérpretes de Python por defecto no deberían emitir ningún mensaje debido a la comprobación de tipos y no deberían alterar su comportamiento basándose en las anotaciones.
 - Los usuarios que no quieran usar comprobadores de tipos son libres de ignorarlos. Sin embargo, se espera que los usuarios de paquetes de librerias de terceros puedan querer ejecutar comprobadores de tipos sobre esos paquetes. Para este propósito PEP 484 recomienda el uso de ficheros stub: ficheros .pyi que son leídos por el comprobador de tipos con preferencia a los correspondientes ficheros .py. Los archivos stub pueden distribuirse con una biblioteca, o por separado (con el permiso del autor de la biblioteca) a través del repositorio typeshed [5].
 
-### Anotaciones de variables
+### Anotaciones de variables<a name="id40"></a>
 
 PEP 526 introdujo las anotaciones de variables. Las recomendaciones de estilo para ellas son similares a las de las anotaciones de funciones descritas anteriormente:
 
@@ -1069,14 +1069,14 @@ Notas a pie de página
 
 [1] La sangría colgante es un estilo tipográfico en el que todas las líneas de un párrafo están sangradas excepto la primera. En el contexto de Python, el término se usa para describir un estilo donde el paréntesis de apertura de una sentencia entre paréntesis es el último carácter no espacio en blanco de la línea, con las líneas subsiguientes sangradas hasta el paréntesis de cierre.
 
-## Referencias
+## Referencias<a name="id41"></a>
 
 [2] Barry’s GNU Mailman style guide http://barry.warsaw.us/software/STYLEGUIDE.txt
 [3] Donald Knuth’s The TeXBook, pages 195 and 196.
 [4] http://www.wikipedia.com/wiki/CamelCase
 [5] Typeshed repo https://github.com/python/typeshed
 
-## Copyright
+## Copyright<a name="id42"></a>
 
 Este documento es de dominio público.
 
