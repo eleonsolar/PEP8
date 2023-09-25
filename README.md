@@ -2,7 +2,7 @@
 
 La PEP8 es una guía que indica las convenciones estilísticas a seguir para escribir código Python. Se trata de un conjunto de recomendaciones cuyo objetivo es ayudar a escribir código más legible y abarca desde cómo nombrar variables, al número máximo de caracteres que una línea debe tener.
 
-Guía oficial [pep8](https://peps.python.org/pep-0008/) 
+Guía oficial [PEP8](https://peps.python.org/pep-0008/) 
 
 **Autor:** Guido van Rossum <guido at python.org>, Barry Warsaw <barry at python.org>, Nick Coghlan <ncoghlan at gmail.com>
 **Estatus:** Active
@@ -12,7 +12,7 @@ Guía oficial [pep8](https://peps.python.org/pep-0008/)
 
 **Tabla de contenido**
 
-- [Introducción](#introduction)
+- [Introducción](#id1)
 - [La insensata coherencia es el duende de las mentes pequeñas](#convenciones-generales)
 - [Disposición del código]
   - [Identación]
@@ -56,7 +56,7 @@ Guía oficial [pep8](https://peps.python.org/pep-0008/)
 - [Copyright]
   
   
-## Introducción  
+## Introducción<a name="id1"></a>  
   
 Este documento proporciona convenciones de codificación para el código Python que comprende la biblioteca estándar en la distribución principal de Python. Por favor, consulta el PEP informativo complementario que describe las directrices de estilo para el código C en la implementación C de Python.
 
